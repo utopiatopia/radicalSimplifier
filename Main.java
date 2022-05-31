@@ -3,6 +3,7 @@ import java.lang.Math;
 
 class Main {
   public static void main(String[] args) {
+    System.out.println("This program is licenced under the MIT License by utopiatopia.\nSource available here: https://github.com/utopiatopia/radicalSimplifier\n");
     // Getting input
     Scanner inputScanner = new Scanner(System.in);
     System.out.print("What is the radical? ");
@@ -25,14 +26,13 @@ class Main {
 
     // Initializing variables
     long outsideRadical = 1;
-    int i = 2;
+    int i = 3;
 
     // Checking if four can be taken out.
     while (radiand%4==0) {
       radiand /= 4; // Removing that perfect square
       outsideRadical *= 2; // Adding the perfect square to the outside
     }
-    i += 1;
 
     // Checking if i squared is greater than the radiand. You can't divide (take out) a pair if the pair is greater than the radiand.
     while (i<=(int)Math.sqrt(radiand)) {
